@@ -3,15 +3,25 @@
   
   Difficulty: Easy
   Topics: Array, Hash Table, Sorting
-  Runtime: 19 ms
-  Memory: 73.81 MB
+  Runtime: 18 ms
+  Memory: 74.56 MB
 
 
   Link: https://leetcode.com/problems/contains-duplicate?envType=problem-list-v2&envId=oizxjoit
 */
 
 function containsDuplicate(nums: number[]): boolean {
-  return nums.length > new Set(nums).size;
+  const visitedNums = new Set<number>();
+
+  for (const num of nums) {
+    if (visitedNums.has(num)) {
+      return true;
+    }
+
+    visitedNums.add(num);
+  }
+
+  return false;
 }
 
 /*
@@ -27,5 +37,9 @@ function containsDuplicate(nums: number[]): boolean {
     }
 
     return false;
+  }
+  
+  function containsDuplicate(nums: number[]): boolean {
+    return nums.length > new Set(nums).size;
   }
 */
