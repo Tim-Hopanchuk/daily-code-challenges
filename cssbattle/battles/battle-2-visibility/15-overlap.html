@@ -1,0 +1,45 @@
+<!-- 
+  #15. Overlap
+
+  Link: https://cssbattle.dev/play/15
+  
+  Match: 100%
+  Characters: 491
+  Score: 603.71
+-->
+
+<div class="left"></div>
+<div class="right">
+  <div class="intersection"></div>
+</div>
+
+<style>
+  body {
+    display: flex;
+    margin: 75px;
+    background: #09042a;
+  }
+
+  div {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+
+  .left {
+    background: #7b3f61;
+  }
+
+  .right {
+    position: relative;
+    margin: 0 -50px;
+    overflow: hidden;
+    background: #e78481;
+  }
+
+  .intersection {
+    position: absolute;
+    left: -100px;
+    background: #09042a;
+  }
+</style>
